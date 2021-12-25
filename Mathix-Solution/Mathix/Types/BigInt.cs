@@ -8,7 +8,7 @@ namespace Mathix.Types
 {
     /// <summary>
     /// Represents an Big Integer in a memory.
-    /// The class is represented in RAM byte-by-byte. Integer operations are also performed.
+    /// The class is represented in RAM as byte-by-byte. Integer operations are also performed.
     /// </summary>
     public class BigInt
     {
