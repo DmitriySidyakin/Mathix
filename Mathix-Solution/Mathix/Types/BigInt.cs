@@ -394,9 +394,8 @@ namespace Mathix.Types
                     result[i] = (byte) a._bytes[i - shiftInBytes];
                 }
             }
-            var returnedResult = new BigInt(result, a.IsNegative);
-            returnedResult.DeleteHighZeroBytes();
-            return returnedResult;
+
+            return new BigInt(result, a.IsNegative);
         }
         
         public static BigInt operator >>(BigInt a, int b)

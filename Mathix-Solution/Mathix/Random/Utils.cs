@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Mathix.Random
 {
-    class Utils
+    public sealed class Utils
     {
     }
 }
