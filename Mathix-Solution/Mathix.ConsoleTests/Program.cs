@@ -35,7 +35,12 @@ namespace Mathix.ConsoleTests
         */
         static void Main(string[] args)
         {
-            string command = GetCommand();
+            IntCalc();
+        }
+
+        private static void IntCalc()
+        {
+            string command = GetCommandInt();
 
             while (command.ToUpperInvariant() != "X")
             {
@@ -72,11 +77,11 @@ namespace Mathix.ConsoleTests
 
                 Console.WriteLine("Ответ: " + result.ToString(10));
 
-                command = GetCommand();
+                command = GetCommandInt();
             }
         }
 
-        private static string GetCommand()
+        private static string GetCommandInt()
         {
             PrintBreak();
             Console.WriteLine("Решение целочисленной операции a?b=: ");
