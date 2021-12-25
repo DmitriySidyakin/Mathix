@@ -11,7 +11,7 @@ namespace Mathix.ConsoleTests
 
         }
         */
-
+        /*
         private static Random rnd = new Random(49634);
 
         private static byte[] GetNewByteArray()
@@ -32,7 +32,7 @@ namespace Mathix.ConsoleTests
         {
             return (byte)rnd.Next(0, 15);
         }
-
+        */
         static void Main(string[] args)
         {
             string command = GetCommand();
@@ -89,9 +89,6 @@ namespace Mathix.ConsoleTests
         {
             Console.WriteLine("_____________________________________");
         }
-        
     }
-
-
 }
 

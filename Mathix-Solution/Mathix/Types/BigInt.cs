@@ -855,12 +855,12 @@ namespace Mathix.Types
 
         public bool IsEven()
         {
-            return (this && One()) == Zero();
+            return (_bytes[0] & 1) == 0;
         }
 
         public bool IsOdd()
         {
-            return (this && One()) == One(); ;
+            return (_bytes[0] & 1) == 1;
         }
 
         #endregion
