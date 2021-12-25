@@ -353,7 +353,7 @@ namespace Mathix.Types
             if (a == Zero()) return (BigInt)a.Clone();
 
             if (b < 0)
-                return a >> Math.Abs(b);
+                return a >> System.Math.Abs(b);
 
             byte[] result;
 
@@ -405,7 +405,7 @@ namespace Mathix.Types
 
             if (a == Zero()) return (BigInt)a.Clone();
 
-            if (b < 0) return a << Math.Abs(b);
+            if (b < 0) return a << System.Math.Abs(b);
 
             BigInt result;
 
