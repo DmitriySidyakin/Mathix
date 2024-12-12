@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.ConstrainedExecution;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -75,6 +76,59 @@ namespace Mathix.Types
             _isNegative = isNegative;
         }
 
+        public BigInt(string bigIntStringHex)
+        {
+            if (bigIntStringHex != null && bigIntStringHex.Length > 0)
+            {
+                int i = 0;
+                bool isNegative = false;
+
+                if (bigIntStringHex[0] == '-')
+                {
+                    isNegative = true;
+                    i++;
+                }
+
+                // Tests sting have all digits
+                for (; i < bigIntStringHex.Length; i++)
+                {
+                    switch (bigIntStringHex[i])
+                    {
+                        case '0': break;
+                        case '1': break;
+                        case '2': break;
+                        case '3': break;
+                        case '4': break;
+                        case '5': break;
+                        case '6': break;
+                        case '7': break;
+                        case '8': break;
+                        case '9': break;
+                        case 'A': break;
+                        case 'B': break;
+                        case 'C': break;
+                        case 'D': break;
+                        case 'E': break;
+                        case 'F': break;
+                        default: throw new ArgumentException("The bigIntString must consist of hex-integers and have no more one negative char!");
+                    }
+
+                    // Convert hex-string in byte array
+                }
+
+                if (isNegative)
+                {
+                    i = 1;
+                }
+                else { i = 0; }
+
+                _bytes = Enumerable.Range(i, bigIntStringHex.Length)
+                                 .Where(x => x % 2 == 0)
+                                 .Select(x => Convert.ToByte(bigIntStringHex.Substring(x, 2), 16))
+                                 .ToList();
+            }
+            else { throw new ArgumentException("The bigIntStringHex is null or empty."); }
+        }
         #endregion
 
         #region Object methods
