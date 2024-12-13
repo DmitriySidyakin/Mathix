@@ -1,2 +1,2 @@
 # Mathix
-The Mathematics library for The .NET
+The Mathematics library for .NET
